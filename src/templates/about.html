@@ -1,0 +1,298 @@
+{% extends 'base.html' %}
+
+{% block title %}{% if title %}{{title}}{% else %}Thrift Experiences{% endif %}  {% endblock %}
+
+{% block content %}
+
+<!-- Featured Services Section -->
+<section id="featured-services" class="featured-services section">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon"><i class="bi bi-activity icon"></i></div>
+          <h4><a href="" class="stretched-link">Unlock the World with Us</a></h4>
+          <p>Unbeatable prices on flights, hotels, and vacation packages.  Personalized travel plans to suit your unique needs.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+          <h4><a href="" class="stretched-link">Your Adventure Begins Here</a></h4>
+          <p>Explore mountains, jungles, beaches, and more with guided tours and unique experiences.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
+          <h4><a href="" class="stretched-link">Your Dream Vacation, Just a Click Away</a></h4>
+          <p>Simple and secure online booking system for flights, hotels, and tours.We're here for you, anytime you need us.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <div class="icon"><i class="bi bi-broadcast icon"></i></div>
+          <h4><a href="" class="stretched-link">Sustainable Travel</a></h4>
+          <p>We support eco-friendly travel options and responsible tourism. Enjoy VIP treatment, including private tours and premium services.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Featured Services Section -->
+
+<!-- About Section -->
+<section id="about" class="about section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About</h2>
+    <p><span>Find Out More</span> <span class="description-title">About Us</span></p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-3">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <img src="{{ url_for('static', filename='img/about.jpg') }}" alt="" class="img-fluid">
+      </div>
+
+      <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="about-content ps-0 ps-lg-3">
+          <h3>Discover Your Perfect Getaway with {{ company }}</h3>
+          <p class="fst-italic">
+            At {{ company }}, we understand that each traveler has a unique vision of their dream vacation. Whether you seek relaxation, adventure, or cultural exploration, our team is dedicated to turning your travel dreams into reality. With personalized itineraries and expert advice, we promise to create unforgettable experiences just for you.
+          </p>
+          <ul>
+            <li>
+              <i class="bi bi-diagram-3"></i>
+              <div>
+                <h4>Expertly Curated Travel Experiences</h4>
+                <p>Our travel experts have curated a variety of vacation packages that cater to all interests and preferences. Whether it’s a luxurious beach escape, a thrilling safari, or an immersive cultural tour, we provide everything you need to ensure a smooth, worry-free trip. Let us guide you to the best destinations and experiences around the world.</p>
+              </div>
+            </li>
+            <li>
+              <i class="bi bi-fullscreen-exit"></i>
+              <div>
+                <h4>Seamless Travel Booking and Planning
+                </h4>
+                <p>
+                  Planning your vacation has never been easier! From selecting the best flights to booking top-notch accommodations, our team takes care of every detail. Enjoy peace of mind with our easy-to-use booking system and comprehensive support. Your perfect vacation is just a click away.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p>
+            Travel with confidence knowing that our team is always ready to assist you. Whether it’s arranging last-minute changes, helping you choose the best travel insurance, or offering on-the-ground support during your trip, we’re here for you every step of the way. Your satisfaction is our priority.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+<!-- Skills Section -->
+<section id="skills" class="skills section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row skills-content skills-animation">
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>Destination Knowledge</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Customer Service</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Travel Planning & Itinerary Creation</span> <i class="val">75%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Customer Obsession</span> <i class="val">100%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Knowledge of Languages</span> <i class="val">75%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>Tour Operations & Logistics </span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Travel Technology & Software</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Marketing & Sales</span> <i class="val">55%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Visa and Travel Documentation Assistance</span> <i class="val">55%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <div class="progress">
+          <span class="skill"><span>Cultural Sensitivity & Language Skills</span> <i class="val">55%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Skills Section -->
+
+<!-- Stats Section -->
+<section id="stats" class="stats section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+        <i class="bi bi-emoji-smile"></i>
+        <div class="stats-item">
+          <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Happy Clients</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+        <i class="bi bi-journal-richtext"></i>
+        <div class="stats-item">
+          <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Projects</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+        <i class="bi bi-headset"></i>
+        <div class="stats-item">
+          <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Hours Of Support</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+        <i class="bi bi-people"></i>
+        <div class="stats-item">
+          <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+          <p>Hard Workers</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Stats Section -->
+
+<!-- Clients Section -->
+<section id="clients" class="clients section light-background">
+
+  <div class="container">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 2,
+              "spaceBetween": 40
+            },
+            "480": {
+              "slidesPerView": 3,
+              "spaceBetween": 60
+            },
+            "640": {
+              "slidesPerView": 4,
+              "spaceBetween": 80
+            },
+            "992": {
+              "slidesPerView": 6,
+              "spaceBetween": 120
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='img/clients/client-1.png') }}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='img/clients/client-2.png') }}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='img/clients/client-3.png') }}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='img/clients/client-4.png') }}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='img/clients/client-5.png') }}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='img/clients/client-6.png') }}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='img/clients/client-7.png') }}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='img/clients/client-8.png') }}" class="img-fluid" alt=""></div>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Clients Section -->
+
+{% endblock %}
+

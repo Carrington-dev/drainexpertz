@@ -1,0 +1,87 @@
+name: Flask CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Run Tests
+        run: |
+          source venv/bin/activate
+          echo "SECRET_KEY=${{ secrets.DO_PASSWORD }}" > .env
+
+          pytest
+          # pytest --maxfail=5 --disable-warnings --tb=short --cov=app tests/
+
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USER }}
+          password: ${{ secrets.DO_PASSWORD }}
+          port: ${{ secrets.DO_PORT }}
+          script: |
+            sudo -u 
+            cd adventures
+            eval $(ssh-agent -s)
+            ssh-add ~/.ssh/id_git_key
+            git pull origin main
+            source venv/bin/activate
+            pip install -r requirements.txt
+            echo "SECRET_KEY=${{ secrets.DO_PASSWORD }}" > .env
+            # sudo systemctl restart gunicorn
+            sudo service gunicorn restart
+            # echo "${{ secrets.DO_PASSWORD }}"             
+            sudo service nginx restart
+            # echo "${{ secrets.DO_PASSWORD }}"
+
+            
+
+
+      # - name: SSH into DigitalOcean and Deploy
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.DO_HOST }}
+      #     USERNAME: ${{ secrets.DO_USER }}
+      #     PORT: ${{ secrets.DO_PORT }}
+      #     KEY: ${{ secrets.DO_SSH_KEY }}
+      #     # host: 157.245.140.54
+      #     # username: ubuntu
+      #     # host: ${{ secrets.DO_HOST }}
+      #     # username: ${{ secrets.DO_USER }}
+      #     # key: ${{ secrets.DO_SSH_KEY }}
+      #     script: |
+      #       # cd /home/ubuntu/adventures
+      #       cd adventures
+      #       git pull origin main
+      #       source venv/bin/activate
+      #       pip install -r requirements.txt
+      #       sudo systemctl restart gunicorn

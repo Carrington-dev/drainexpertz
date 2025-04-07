@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+
+{% block title %}{% if title %}{{title}}{% else %}Thrift Experiences{% endif %}{% endblock %}
+
+{% block content %}
+
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Services</h2>
+    <p><span>Check Our</span> <span class="description-title">Services</span></p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-activity"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Explore Tailored Travel Solutions
+            </h3>
+          </a>
+          <p>We offer personalized travel planning to make your dream vacation a reality. Whether you're looking for a luxury escape or an adventurous journey, our expert team ensures every detail is taken care of, from flights to activities, so you can travel with ease.
+          </p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-broadcast"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Hassle-Free Booking and Itineraries
+            </h3>
+          </a>
+          <p>Our booking services are designed for your convenience. With just a few clicks, you can book flights, accommodations, and tours. We’ll handle all the logistics, so you can focus on enjoying your getaway.
+          </p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-easel"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Exclusive Travel Packages
+            </h3>
+          </a>
+          <p>Choose from a range of handpicked travel packages that suit every budget and preference. Whether it's a cultural tour, beach getaway, or city exploration, we offer unique experiences you won’t find anywhere else.
+          </p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-bounding-box-circles"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Premium Services for Discerning Travelers
+            </h3>
+          </a>
+          <p>Travel in style with our VIP services, including luxury hotel bookings, private tours, and concierge support. We offer bespoke services to ensure your trip is both comfortable and unforgettable.
+          </p>
+          <a href="#" class="stretched-link"></a>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-calendar4-week"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>Adventure and Exploration
+            </h3>
+          </a>
+          <p>For those seeking excitement, we offer curated adventure packages that take you off the beaten path. From safaris to mountain hikes, our adventure experts ensure a thrilling experience with safety and enjoyment in mind.          </p>
+          <a href="#" class="stretched-link"></a>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-chat-square-text"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3>24/7 Customer Support
+            </h3>
+          </a>
+          <p>No matter where you are in the world, our customer support team is available around the clock to assist with any questions or travel needs. Your comfort and satisfaction are our top priority.          </p>
+          <a href="#" class="stretched-link"></a>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section dark-background">
+
+  <img src="{{ url_for('static', filename='img/testimonials-bg.jpg') }}" class="testimonials-bg" alt="">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{{ url_for('static', filename='img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
+            <h3>Saul Goodman</h3>
+            <h4>Ceo &amp; Founder</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{{ url_for('static', filename='img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{{ url_for('static', filename='img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
+            <h3>Jena Karlis</h3>
+            <h4>Store Owner</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{{ url_for('static', filename='img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
+            <h3>Matt Brandon</h3>
+            <h4>Freelancer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{{ url_for('static', filename='img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
+            <h3>John Larson</h3>
+            <h4>Entrepreneur</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Testimonials Section -->
+
+{% endblock %}
+
