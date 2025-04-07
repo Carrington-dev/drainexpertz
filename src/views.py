@@ -9,7 +9,7 @@ def inject_globals():
     return {
         "company": company,
         "year": 2025,
-        "phone": '+27 (0) 78 735 2242',
+        "phone": '+27 (0) 79 800 5807',
         "title": 'Plumbing Services Near Me',
         "email": 'hello@drainexperts.co.za',
         "address": "395 Francis Baard Street</p><p>Pretoria Central, 0001/2</p><p>South Africa",
